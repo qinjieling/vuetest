@@ -16,8 +16,8 @@ export default {
     }
   },
   components:{
-    'my-count':count,
-    'my-hellow':HelloWorld
+    'my-count': count,
+    'my-hellow': HelloWorld
   },
   methods:{
     parentFn(payload){

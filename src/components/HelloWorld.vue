@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h1>{{parentValue}}</h1>
-    <input type="text" v-model="number">
+    <input type="text" v-model="number" @input="inputNumber">
     <button @click="click">按钮+1</button>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       msg: 'HelloWorld组件',
-      number:10
+      number:''
     }
   },
   props:{
@@ -23,6 +23,9 @@ export default {
   },
   methods:{
     click(){
+      this.$emit('childFn',this.number)
+    },
+    inputNumber(){
       this.$emit('childFn',this.number)
     }
   }
