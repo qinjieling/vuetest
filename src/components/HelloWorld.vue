@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h1>{{parentValue}}</h1>
+    <input type="text" v-model="number">
+    <button @click="click">按钮+1</button>
   </div>
 </template>
 
@@ -9,7 +12,18 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome'
+      msg: 'HelloWorld组件',
+      number:10
+    }
+  },
+  props:{
+    parentValue:{
+      type:String
+    }
+  },
+  methods:{
+    click(){
+      this.$emit('childFn',this.number)
     }
   }
 }
