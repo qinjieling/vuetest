@@ -11,6 +11,10 @@ export default new Router({
     {
       path: '/count',
       component: () => import('@/views/count/count'),
+    },
+    {
+      path: '/add',
+      component: () => import('@/views/count/add'),
     }
   ]
 })

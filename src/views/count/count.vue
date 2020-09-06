@@ -3,6 +3,7 @@
     <my-count></my-count>
     <my-hellow :parentValue="totalnum" @childFn="parentFn"></my-hellow>
     <div>子组件传来的值：{{number}}</div>
+    
   </div>
 </template>
 <script>
@@ -22,7 +23,7 @@ export default {
   methods:{
     parentFn(payload){
       this.number = payload
-    }
+    },
   }
 }
 </script>
