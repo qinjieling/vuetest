@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <slot></slot>
     <div class="add">
       <!-- <h1>{{$store.state.count}}</h1> -->
       <h1>{{count}}</h1>

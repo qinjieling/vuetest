@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
+    <router-link to="/count">Go to count</router-link>
+    <router-link to="/add">Go to add</router-link>
     <router-view/>
   </div>
 </template>

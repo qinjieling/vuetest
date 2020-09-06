@@ -6,7 +6,7 @@
     </keep-alive>
     <input type="text" v-model="number" @input="inputNumber">
     <button @click="click">修改颜色</button>
-    <button @click="toAdd">跳转</button>
+    <!-- <button @click="toAdd">跳转</button> -->
   </div>
 </template>
 
@@ -39,11 +39,11 @@ export default {
     inputNumber(){
       this.$emit('childFn',this.number)
     },
-    toAdd(){
-      this.$router.push({
-        path:'/add'
-      })
-    }
+    // toAdd(){
+    //   this.$router.push({
+    //     path:'/add'
+    //   })
+    // }
   }
 }
 </script>
